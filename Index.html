@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saba Aptsiauri — Web Developer</title>
+  <meta name="description" content="Portfolio of Saba Aptsiauri (HTML/CSS/JS & Python). Projects, skills, and contact." />
+  <meta property="og:title" content="Saba Aptsiauri — Web Developer">
+  <meta property="og:description" content="Frontend & Python projects, live demos, and contact.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="container nav">
+    <a class="logo" href="#home">Saba.dev</a>
+    <button class="nav-toggle" aria-label="Open menu" id="navToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="btn" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero container">
+    <div class="hero-copy">
+      <h1>Hi, I’m <span class="accent">Saba Aptsiauri</span></h1>
+      <p class="tagline">Frontend & Python developer. I build fast, clean, responsive apps.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn ghost" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true"></div>
+  </section>
+
+  <section id="projects" class="container section">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="assets/project1.jpg" alt="Screenshot of Task Manager app">
+        <div class="card-body">
+          <h3>Task Manager (Django)</h3>
+          <p>Users register, sign in, and manage tasks with deadlines and statuses.</p>
+          <div class="chip-row">
+            <span class="chip">Django</span><span class="chip">SQLite</span><span class="chip">JS</span>
+          </div>
+          <div class="actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="assets/project2.jpg" alt="Screenshot of Mini E-commerce">
+        <div class="card-body">
+          <h3>Mini Store</h3>
+          <p>Products, cart, and demo checkout — clean UX and solid backend.</p>
+          <div class="chip-row">
+            <span class="chip">Flask</span><span class="chip">PostgreSQL</span><span class="chip">Stripe (test)</span>
+          </div>
+          <div class="actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="assets/project3.jpg" alt="Screenshot of Telegram Bot">
+        <div class="card-body">
+          <h3>Telegram Bot</h3>
+          <p>Weather or currency updates with commands and inline keyboards.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">API</span>
+          </div>
+          <div class="actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Docs</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="container section">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills">
+      <li>HTML5/CSS3 (Responsive, Flex/Grid, Animations)</li>
+      <li>JavaScript (DOM, Fetch, ES6+)</li>
+      <li>Python (Flask/Django), SQLite/PostgreSQL</li>
+      <li>APIs & Integrations (Telegram, payments)</li>
+      <li>Git/GitHub, Deployments (GitHub Pages, Render)</li>
+    </ul>
+  </section>
+
+  <section id="about" class="container section">
+    <h2 class="section-title">About</h2>
+    <p>I’m Saba, a self-driven developer focused on building clean, useful apps fast. I enjoy turning ideas into working products and writing code that’s easy to read and maintain.</p>
+  </section>
+
+  <section id="contact" class="container section">
+    <h2 class="section-title">Contact</h2>
+    <form id="contactForm" class="contact-form" action="#" method="post">
+      <label>
+        Your email
+        <input name="email" type="email" required placeholder="you@example.com">
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="5" required placeholder="Tell me about your project…"></textarea>
+      </label>
+      <button class="btn" type="submit">Send</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Saba Aptsiauri • <a href="mailto:you@email.com">you@email.com</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
