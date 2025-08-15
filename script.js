@@ -19,7 +19,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 // footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// (Optional) fake contact submission (replace with real endpoint later)
+// fake contact submission (replace with real endpoint later)
 const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
 form?.addEventListener('submit', async (e)=>{
@@ -28,4 +28,14 @@ form?.addEventListener('submit', async (e)=>{
   await new Promise(r=>setTimeout(r,800));
   statusEl.textContent = 'Thanks! I will reply soon.';
   form.reset();
+});
+
+// gentle parallax on hero orb
+const orb = document.querySelector('.orb');
+document.addEventListener('mousemove', (e)=>{
+  if(!orb) return;
+  const { innerWidth:w, innerHeight:h } = window;
+  const x = (e.clientX / w - 0.5) * 8; // -4..4
+  const y = (e.clientY / h - 0.5) * 8;
+  orb.style.transform = `translate(${x}px, ${y}px) scale(1)`;
 });
